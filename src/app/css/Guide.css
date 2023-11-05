@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  border: 1px solid black;
+}
+
+.guide {
+  position: absolute;
+  width: 100svw;
+  height: 100svh;
+  top: 0;
+  left: 0;
+  background: linear-gradient(60deg, #ffffff, #f0f0ff);
+  z-index: 20;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 100px;
+}
+
+.guide01,
+.guide02,
+.guide03 {
+  border: 5px solid var(--ourly-theme);
+  border-radius: 16px;
+
+  width: 350px;
+  height: 450px;
+
+  padding: 16px;
+
+  background-color: #fff;
+
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.guide01,
+.guide02,
+.guide03 {
+  background-image: url(/img/question-bg.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  position: relative;
+}
+.guide01::after {
+  content: '';
+  background: url(/img/20Yman-02-bgN.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 65%;
+  height: 65%;
+}
+.guide02::after {
+  content: '';
+  background: url(/img/30Yman-02-bgN.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+}
+.guide03::after {
+  content: '';
+  background: url(/img/30Ywoman-01-bgN-2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+}
+
+.guide-bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  gap: 50px;
+}
+
+.guide-title {
+  position: relative;
+  top: 0;
+
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 1s ease;
+}
+
+.open {
+  position: absolute;
+  right: 160px;
+  bottom: 4%;
+
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+
+  /* animation: openanimation infinite 1s; */
+}
+
+.open::after {
+  content: url(/img/arrow.svg);
+  position: absolute;
+  top: 16px;
+  left: -48px;
+  width: 250px;
+}
+
+@media (max-width: 1000px) {
+  .guide {
+    display: none;
+  }
+}
+
+.guide01:hover,
+.guide02:hover,
+.guide03:hover {
+  transform: scale(1.1) !important;
+  transition-duration: 0.5s;
+}
+
+.open:hover {
+  transform: translateX(32px) !important;
+  transition-duration: 0.5s;
+}
+
+@keyframes openanimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(16px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

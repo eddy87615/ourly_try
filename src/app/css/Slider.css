@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page01 {
+  position: relative;
+}
+
+.title01 {
+  position: absolute;
+  top: 288px;
+  left: 100px;
+}
+.title02 {
+  position: absolute;
+  top: 288px;
+  right: 100px;
+}
+.title02 h1,
+.title02 p {
+  text-align: right;
+}
+.title02::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  width: 80px;
+  height: 15px;
+  background-color: var(--ourly-theme);
+}
+.title03 {
+  position: absolute;
+  top: 500px;
+  right: 100px;
+}
+.title03 h1,
+.title03 p {
+  text-align: right;
+}
+.title03::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 80px;
+  height: 15px;
+  background-color: var(--ourly-theme);
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+
+  margin-bottom: 24px;
+}
+p {
+  font-size: 24px;
+}
+.title01::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 80px;
+  height: 15px;
+  background-color: var(--ourly-theme);
+}
+
+.page01::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-image: url('/img/personal-01-bgN.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page02 {
+  position: relative;
+}
+
+.page02::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 75%;
+  background-image: url('/img/30Ywoman-04-bgN.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.download01 {
+  position: absolute;
+  display: flex;
+  top: 620px;
+  left: 100px;
+  width: 180px;
+}
+.download02 {
+  position: absolute;
+  display: flex;
+  top: 620px;
+  left: 300px;
+  width: 180px;
+}
+
+.download03 img {
+  position: absolute;
+  display: flex;
+  top: 620px;
+  right: 100px;
+  width: 180px;
+}
+.download04 img {
+  position: absolute;
+  display: flex;
+  top: 620px;
+  right: 300px;
+  width: 180px;
+}
+
+.download05 img {
+  position: absolute;
+  display: flex;
+  top: 350px;
+  right: 100px;
+  width: 180px;
+}
+.download06 img {
+  position: absolute;
+  display: flex;
+  top: 350px;
+  right: 300px;
+  width: 180px;
+}
+
+.KV {
+  width: 100%;
+  height: 100svh;
+}

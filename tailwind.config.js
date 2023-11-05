@@ -12,7 +12,26 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      color: {
+        'ourly-theme': '#ff4448',
+        'base-color': '#F0F0FF',
+        'purple-dark': '#3F4066',
+        'purple-light': '#5A5B90',
+      },
+      borderColor: {
+        'ourly-theme': '#ff4448',
+      },
+      fontSize: {
+        sm: '8px',
+        md: '14px',
+        lg: '16px',
+        xl: '40px',
+      },
+      screen: {
+        md: '768px',
+        lg: '1024px',
+      },
     },
   },
   plugins: [],
-}
+};
