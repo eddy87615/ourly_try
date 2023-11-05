@@ -11,7 +11,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import './globals.css';
+import './css/globals.css';
 
 export default function Slider() {
   return (
