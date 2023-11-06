@@ -46,9 +46,13 @@ export default function Guide() {
     <>
       <div className={`guide ${isOpen ? 'guide-open' : ''}`}>
         <div className="header fixed top-0 left-0 z-10 p-8">
-          <img src="/img/ourly_logo_w600.png" className="w-56" />
+          <a href="https://service.ourly.jp/">
+            <img src="/img/ourly_logo_w600.png" className="w-56" />
+          </a>
         </div>
-        <p className="text-[48px] guide-title">あなたは何を悩んでいるの？</p>
+        <p className="text-[48px] font-bold guide-title">
+          あなたは何を悩んでいるの？
+        </p>
         <div className="guide-bubble">
           <div
             className={`guide01 shadow-2xl ${
@@ -56,7 +60,7 @@ export default function Guide() {
             }`}
             onClick={() => handleGuide(1)}
           >
-            <p className="text-[20px]">
+            <p className="text-[20px] ">
               ずっとリモートだから会社に
               <br />
               何が起きたのか全然わからない...

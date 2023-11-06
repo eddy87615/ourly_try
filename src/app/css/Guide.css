@@ -26,7 +26,7 @@
 .guide-open {
   transform: translateY(-200vh);
   opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
+  transition: transform 1.5s ease, opacity 1s ease;
 }
 
 .guide01,
@@ -52,14 +52,18 @@
 .guide01-open,
 .guide02-open,
 .guide03-open {
-  transform: translateY(150px) !important;
+  transform: translateY(500px) !important;
   opacity: 0 !important;
 }
 
 .guide01,
 .guide02,
 .guide03 {
-  background-image: url(/img/question-bg.svg);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url('/img/question-bg.svg');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 120%;
