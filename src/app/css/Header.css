@@ -10,3 +10,7 @@
   @apply border border-solid border-4 px-10 rounded-full bg-white shadow-xl font-bold;
   border-color: var(--ourly-theme);
 }
+
+.otoiawase:hover {
+  box-shadow: none;
+}

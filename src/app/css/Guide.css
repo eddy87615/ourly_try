@@ -24,7 +24,7 @@
 }
 
 .guide-open {
-  transform: translateY(-100vh);
+  transform: translateY(-200vh);
   opacity: 0;
   transition: transform 1s ease, opacity 1s ease;
 }
@@ -52,7 +52,7 @@
 .guide01-open,
 .guide02-open,
 .guide03-open {
-  transform: translateY(500px) !important;
+  transform: translateY(150px) !important;
   opacity: 0 !important;
 }
 
