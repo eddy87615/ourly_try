@@ -4,6 +4,7 @@ import React from 'react';
 import './css/globals.css';
 import './css/Guide.css';
 import { useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Guide() {
   useEffect(() => {
@@ -22,15 +23,39 @@ export default function Guide() {
 
     animateElements();
   }, []);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const [isGuideOpen, setGuideOpen] = useState({
+    guide01: false,
+    guide02: false,
+    guide03: false,
+  });
+  const handleGuide = (guideNum) => {
+    setGuideOpen((prevGuideOpen) => ({
+      ...prevGuideOpen,
+      [`guide0${guideNum}`]: true,
+    }));
+    setIsOpen(true);
+  };
+
   return (
     <>
-      <div className="guide">
+      <div className={`guide ${isOpen ? 'guide-open' : ''}`}>
         <div className="header fixed top-0 left-0 z-10 p-8">
           <img src="/img/ourly_logo_w600.png" className="w-56" />
         </div>
         <p className="text-[48px] guide-title">あなたは何を悩んでいるの？</p>
         <div className="guide-bubble">
-          <div className="guide01 shadow-2xl">
+          <div
+            className={`guide01 shadow-2xl ${
+              isGuideOpen.guide01 ? 'guide01-open' : ''
+            }`}
+            onClick={() => handleGuide(1)}
+          >
             <p className="text-[20px]">
               ずっとリモートだから会社に
               <br />
@@ -40,7 +65,12 @@ export default function Guide() {
               会社との交流が少なくなった…
             </p>
           </div>
-          <div className="guide02 shadow-2xl">
+          <div
+            className={`guide02 shadow-2xl ${
+              isGuideOpen.guide02 ? 'guide02-open' : ''
+            }`}
+            onClick={() => handleGuide(2)}
+          >
             <p className="text-[20px]">
               どうやって自分の声がちゃんと
               <br />
@@ -50,7 +80,12 @@ export default function Guide() {
               職場をさらによくしたいな…
             </p>
           </div>
-          <div className="guide03 shadow-2xl">
+          <div
+            className={`guide03 shadow-2xl ${
+              isGuideOpen.guide03 ? 'guide03-open' : ''
+            }`}
+            onClick={() => handleGuide(3)}
+          >
             <p className="text-[20px]">社内報の制作と管理が難しい…</p>
             <p className="text-[20px] text-right mt-5">
               みんなは自分の作った内容に
@@ -59,7 +94,9 @@ export default function Guide() {
             </p>
           </div>
         </div>
-        <button className="open text-[18px]">最初からourlyを知る</button>
+        <button className="open text-[18px]" onClick={handleOpen}>
+          最初からourlyを知る
+        </button>
       </div>
     </>
   );

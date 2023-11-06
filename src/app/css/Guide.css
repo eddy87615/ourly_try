@@ -23,6 +23,12 @@
   gap: 100px;
 }
 
+.guide-open {
+  transform: translateY(-100vh);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
 .guide01,
 .guide02,
 .guide03 {
@@ -40,7 +46,14 @@
 
   opacity: 0;
   transform: translateY(-50px);
-  transition: opacity 1s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.guide01-open,
+.guide02-open,
+.guide03-open {
+  transform: translateY(500px) !important;
+  opacity: 0 !important;
 }
 
 .guide01,
@@ -131,11 +144,11 @@
   }
 }
 
-.guide01:hover,
-.guide02:hover,
-.guide03:hover {
+.guide01:not(.guide01-open):hover,
+.guide02:not(.guide02-open):hover,
+.guide03:not(.guide03-open):hover {
   transform: scale(1.1) !important;
-  transition-duration: 0.5s;
+  transition-duration: 0.5s !important;
 }
 
 .open:hover {
