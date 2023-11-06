@@ -7,7 +7,7 @@
 }
 
 .otoiawase {
-  @apply border border-solid border-4 px-10 rounded-full bg-white shadow-xl font-bold;
+  @apply border border-solid border-4 px-10 rounded-full bg-white shadow-xl font-bold transition-all duration-300;
   border-color: var(--ourly-theme);
 }
 
