@@ -77,6 +77,89 @@ p {
   background-image: url('/img/personal-01-bgN.png');
   background-repeat: no-repeat;
   background-size: cover;
+
+  animation: KV01 2s ease infinite;
+}
+
+.triangle01 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 0 30px 400px;
+  border-color: transparent transparent transparent var(--ourly-theme);
+
+  position: absolute;
+  right: 35%;
+  top: 30%;
+
+  transform: rotate(30deg);
+}
+.triangle02 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 0 30px 200px;
+  border-color: transparent transparent transparent var(--ourly-theme);
+
+  position: absolute;
+  right: 35%;
+  top: 60%;
+
+  transform: rotate(-30deg);
+}
+
+.triangle03 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 400px 30px 0;
+  border-color: transparent var(--ourly-theme) transparent transparent;
+
+  position: absolute;
+  left: 35%;
+  top: 30%;
+
+  transform: rotate(-30deg);
+}
+.triangle04 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 200px 30px 0;
+  border-color: transparent var(--ourly-theme) transparent transparent;
+
+  position: absolute;
+  left: 35%;
+  top: 60%;
+
+  transform: rotate(30deg);
+}
+
+.triangle05 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 400px 30px 0;
+  border-color: transparent var(--ourly-theme) transparent transparent;
+
+  position: absolute;
+  left: 50%;
+  top: 60%;
+
+  transform: rotate(-30deg);
+}
+.triangle06 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 200px 30px 0;
+  border-color: transparent var(--ourly-theme) transparent transparent;
+
+  position: absolute;
+  left: 50%;
+  top: 80%;
+
+  transform: rotate(30deg);
 }
 
 .page02 {
@@ -93,6 +176,8 @@ p {
   background-image: url('/img/30Ywoman-04-bgN.png');
   background-repeat: no-repeat;
   background-size: cover;
+
+  animation: KV02 2s ease infinite;
 }
 
 .download01 {
@@ -143,4 +228,46 @@ p {
 .KV {
   width: 100%;
   height: 100svh;
+}
+
+@keyframes KV01 {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(16px);
+  }
+  40% {
+    transform: translateX(0px);
+  }
+  60% {
+    transform: translateX(0px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes KV02 {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(16px);
+  }
+  40% {
+    transform: translateX(0px);
+  }
+  60% {
+    transform: translateX(0px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }

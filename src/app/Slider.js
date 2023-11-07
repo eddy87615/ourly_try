@@ -39,10 +39,10 @@ export default function Slider() {
         spaceBetween={30}
         loop={true}
         centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
         }}
@@ -63,6 +63,8 @@ export default function Slider() {
               web社内報ツールです。
             </p>
           </div>
+          <span className="triangle01"></span>
+          <span className="triangle02"></span>
           <img
             src={isMobile ? '/img/phone-KV01.png' : '/img/office-bg.jpg'}
             className="KV"
@@ -95,6 +97,8 @@ export default function Slider() {
               web社内報ツールです。
             </p>
           </div>
+          <span className="triangle03"></span>
+          <span className="triangle04"></span>
           <img
             src={isMobile ? '/img/phone-KV02.png' : '/img/30Ywoman-04-bg.jpg'}
           />
@@ -126,6 +130,8 @@ export default function Slider() {
               web社内報ツールです。
             </p>
           </div>
+          <span className="triangle05"></span>
+          <span className="triangle06"></span>
           <img
             src={isMobile ? '/img/phone-KV03.png' : '/img/happypeople.jpg'}
           />
