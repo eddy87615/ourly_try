@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  border: 1px solid black;
-}
-
 .guide {
   position: absolute;
   width: 100svw;
@@ -21,6 +17,8 @@
   flex-direction: column;
 
   gap: 100px;
+
+  display: none;
 }
 
 .guide-open {
