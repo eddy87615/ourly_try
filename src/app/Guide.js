@@ -42,9 +42,15 @@ export default function Guide() {
     setIsOpen(true);
   };
 
+  const handleTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <>
-      <div className={`guide ${isOpen ? 'guide-open' : ''}`}>
+      <div className={`guide fixed ${isOpen ? 'guide-open' : ''}`}>
         <div className="header fixed top-0 left-0 z-10 p-8">
           <a href="https://service.ourly.jp/">
             <img src="/img/ourly_logo_w600.png" className="w-56" />
@@ -98,7 +104,13 @@ export default function Guide() {
             </p>
           </div>
         </div>
-        <button className="open text-[18px]" onClick={handleOpen}>
+        <button
+          className="open text-[18px]"
+          onClick={() => {
+            handleOpen();
+            handleTop();
+          }}
+        >
           最初からourlyを知る
         </button>
       </div>

@@ -133,7 +133,7 @@ export default function Slider() {
           <span className="triangle05"></span>
           <span className="triangle06"></span>
           <img
-            src={isMobile ? '/img/phone-KV03.png' : '/img/happypeople.jpg'}
+            src={isMobile ? '/img/phone-KV03.png' : '/img/happypeople-bg.png'}
           />
           <a
             className="download05"

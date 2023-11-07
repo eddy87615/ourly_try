@@ -7,8 +7,9 @@
 }
 
 .otoiawase {
-  @apply border border-solid border-4 px-10 rounded-full bg-white shadow-xl font-bold transition-all duration-300;
+  @apply border border-solid border-4 px-10 rounded-full bg-white font-bold transition-all duration-300;
   border-color: var(--ourly-theme);
+  box-shadow: 4px 4px 8px #3e3e3e;
 }
 
 .otoiawase:hover {
