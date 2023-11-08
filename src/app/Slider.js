@@ -53,9 +53,9 @@ export default function Slider() {
         <SwiperSlide className={isMobile ? '' : 'page01'}>
           <div className="title01">
             <h1>
-              私はourlyで
+              ourlyを導入してから
               <br />
-              より良い職場ができた！
+              会社に関する悩みが全部解決できました！
             </h1>
             <p>
               ourlyは、社員のエンゲージメントを向上させる、
@@ -89,7 +89,9 @@ export default function Slider() {
             <h1>
               私はourlyで
               <br />
-              より良い社内報ができた！
+              同僚の好き嫌いに合う社内報が
+              <br />
+              簡単にできました！
             </h1>
             <p>
               ourlyは、社員のエンゲージメントを向上させる、
@@ -122,7 +124,7 @@ export default function Slider() {
             <h1>
               私たちはourlyで
               <br />
-              より良く繋いできた！
+              一体感が生まれました！
             </h1>
             <p>
               ourlyは、社員のエンゲージメントを向上させる、

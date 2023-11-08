@@ -12,8 +12,6 @@ export default function App() {
       <Swiper />
       <Intro />
       <Main />
-      <Main />
-      <Main />
     </>
   );
 }

@@ -57,7 +57,7 @@ export default function Guide() {
           </a>
         </div>
         <p className="text-[48px] font-bold guide-title">
-          あなたは何を悩んでいるの？
+          こんなお悩みありませんか？
         </p>
         <div className="guide-bubble">
           <div

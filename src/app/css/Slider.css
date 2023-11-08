@@ -23,7 +23,7 @@
 .title02::after {
   content: '';
   position: absolute;
-  bottom: -50px;
+  bottom: -10%;
   right: 0;
   width: 80px;
   height: 15px;
@@ -41,7 +41,7 @@
 .title03::before {
   content: '';
   position: absolute;
-  top: -50px;
+  top: -10%;
   right: 0;
   width: 80px;
   height: 15px;
@@ -60,7 +60,7 @@ p {
 .title01::after {
   content: '';
   position: absolute;
-  bottom: -50px;
+  bottom: -16%;
   left: 0;
   width: 80px;
   height: 15px;
@@ -144,7 +144,7 @@ p {
 
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 50%;
 
   transform: rotate(-30deg);
 }
@@ -200,14 +200,14 @@ p {
 .download01 {
   position: absolute;
   display: flex;
-  top: 620px;
+  top: 72%;
   left: 100px;
   width: 180px;
 }
 .download02 {
   position: absolute;
   display: flex;
-  top: 620px;
+  top: 72%;
   left: 300px;
   width: 180px;
 }
@@ -215,14 +215,14 @@ p {
 .download03 img {
   position: absolute;
   display: flex;
-  top: 620px;
+  top: 80%;
   right: 100px;
   width: 180px;
 }
 .download04 img {
   position: absolute;
   display: flex;
-  top: 620px;
+  top: 80%;
   right: 300px;
   width: 180px;
 }
@@ -230,14 +230,14 @@ p {
 .download05 img {
   position: absolute;
   display: flex;
-  top: 350px;
+  top: 45%;
   right: 100px;
   width: 180px;
 }
 .download06 img {
   position: absolute;
   display: flex;
-  top: 350px;
+  top: 45%;
   right: 300px;
   width: 180px;
 }

@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ourly-theme: #ff4448;
+  --base-color: '#F0F0FF';
+  --purple-dark: '#3F4066';
+  --purple-light: '#5A5B90';
+}
+
+.span {
+  color: var(--ourly-theme);
+  position: absolute;
+  opacity: 0.5;
+}
+
+.span01 {
+  top: 10%;
+  right: 30%;
+}
+.span02 {
+  top: 30%;
+  left: 60%;
+}
+.span03 {
+  top: 60%;
+  right: 8%;
+}
+.span04 {
+  top: 80%;
+  right: 24%;
+}
+
 .intro {
   height: 650px;
   width: 100%;
@@ -14,8 +44,8 @@
   flex-direction: row-reverse;
 
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
     ),
     url(/img/mess.gif);
   background-color: #fff;
