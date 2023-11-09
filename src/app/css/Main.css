@@ -14,23 +14,58 @@
   height: 200svh;
 }
 
-.annoying {
+.annoyingman01 {
   width: 100%;
   height: 100svh;
 
   background-color: #f0f0ff;
 
   position: relative;
+  z-index: -2;
 }
-.annoying img {
-  width: 30%;
+.annoyingman01 img {
+  width: 25%;
   height: auto;
 
   position: absolute;
   bottom: 0px;
   right: 4%;
 }
-.solved {
+.annoyingman02 {
+  width: 100%;
+  height: 100svh;
+
+  background-color: #f0f0ff;
+
+  position: relative;
+  z-index: -2;
+}
+.annoyingman02 img {
+  width: 40%;
+  height: auto;
+
+  position: absolute;
+  bottom: 0px;
+  right: -4%;
+}
+.annoyingwoman {
+  width: 100%;
+  height: 100svh;
+
+  background-color: #f0f0ff;
+
+  position: relative;
+  z-index: -2;
+}
+.annoyingwoman img {
+  width: 50%;
+  height: auto;
+
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+}
+.solvedman01 {
   width: 100%;
   height: 100svh;
 
@@ -38,7 +73,7 @@
 
   position: relative;
 }
-.solved img {
+.solvedman01 img {
   width: 32%;
   height: auto;
 
@@ -46,7 +81,100 @@
   bottom: 0px;
   left: 4%;
 }
+.solvedman02 {
+  width: 100%;
+  height: 100svh;
+
+  background-color: var(--base-color);
+
+  position: relative;
+}
+.solvedman02 img {
+  width: 40%;
+  height: auto;
+
+  position: absolute;
+  bottom: 0px;
+  left: 4%;
+}
+.solvedwoman {
+  width: 100%;
+  height: 100svh;
+
+  background-color: var(--base-color);
+
+  position: relative;
+}
+.solvedwoman img {
+  width: 45%;
+  height: auto;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+
+  transform: rotateY(180deg);
+}
 
 h2 {
-  padding: 80px;
+  padding: 8% 0 4% 8%;
+  z-index: 10;
+  position: relative;
+
+  z-index: 2;
+}
+.underLine {
+  border-bottom: 5px solid var(--ourly-theme);
+  padding-bottom: 8px;
+}
+
+.annoyingman01::before,
+.annoyingman02::before {
+  content: '';
+  background-image: url(/img/question.gif);
+  background-size: 80%;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+.annoyingwoman ::before {
+  content: '';
+  background-image: url(/img/question.gif);
+  background-size: 80%;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 8%;
+  right: 0;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.speech-bubble {
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  border: solid 5px red;
+  border-radius: 100px;
+  margin: 30px;
+  padding: 16px 48px;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  transform: rotate(130deg);
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  top: 60%;
+  right: -24px;
+  z-index: -1;
 }

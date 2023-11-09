@@ -52,7 +52,7 @@ export default function Slider() {
       >
         <SwiperSlide className={isMobile ? '' : 'page01'}>
           <div className="title01">
-            <h1>
+            <h1 className={isMobile ? 'text-[32px]' : ''}>
               ourlyを導入してから
               <br />
               会社に関する悩みが全部解決できました！
@@ -69,24 +69,16 @@ export default function Slider() {
             src={isMobile ? '/img/phone-KV01.png' : '/img/office-bg.jpg'}
             className="KV"
           />
-          <a
-            className="download01"
-            href="https://play.google.com/store/apps/details?id=jp.ourly.media&hl=en_US"
-            target="_blank"
-          >
-            <img src="/img/google-play-download-android-app-logo-png-transparent.png" />
-          </a>
-          <a
-            className="download02"
-            href="https://apps.apple.com/jp/app/ourly/id1589408338"
-            target="_blank"
-          >
-            <img src="/img/app-store-icons-apple-app-store.png" />
-          </a>
+          <span className="download01">
+            <img src="/img/QR_google.png" />
+          </span>
+          <span className="download02">
+            <img src="/img/QR_apple.png" />
+          </span>
         </SwiperSlide>
         <SwiperSlide className={isMobile ? '' : 'page02'}>
           <div className="title02">
-            <h1>
+            <h1 className={isMobile ? 'text-[32px]' : ''}>
               私はourlyで
               <br />
               同僚の好き嫌いに合う社内報が
@@ -104,24 +96,16 @@ export default function Slider() {
           <img
             src={isMobile ? '/img/phone-KV02.png' : '/img/30Ywoman-04-bg.jpg'}
           />
-          <a
-            className="download03"
-            href="https://play.google.com/store/apps/details?id=jp.ourly.media&hl=en_US"
-            target="_blank"
-          >
-            <img src="/img/google-play-download-android-app-logo-png-transparent.png" />
-          </a>
-          <a
-            className="download04"
-            href="https://apps.apple.com/jp/app/ourly/id1589408338"
-            target="_blank"
-          >
-            <img src="/img/app-store-icons-apple-app-store.png" />
-          </a>
+          <span className="download03">
+            <img src="/img/QR_google.png" />
+          </span>
+          <span className="download04">
+            <img src="/img/QR_apple.png" />
+          </span>
         </SwiperSlide>
         <SwiperSlide className={isMobile ? '' : 'page03'}>
           <div className="title03">
-            <h1>
+            <h1 className={isMobile ? 'text-[32px]' : ''}>
               私たちはourlyで
               <br />
               一体感が生まれました！
@@ -137,20 +121,12 @@ export default function Slider() {
           <img
             src={isMobile ? '/img/phone-KV03.png' : '/img/happypeople-bg.png'}
           />
-          <a
-            className="download05"
-            href="https://play.google.com/store/apps/details?id=jp.ourly.media&hl=en_US"
-            target="_blank"
-          >
-            <img src="/img/google-play-download-android-app-logo-png-transparent.png" />
-          </a>
-          <a
-            className="download06"
-            href="https://apps.apple.com/jp/app/ourly/id1589408338"
-            target="_blank"
-          >
-            <img src="/img/app-store-icons-apple-app-store.png" />
-          </a>
+          <span className="download05">
+            <img src="/img/QR_google.png" />
+          </span>
+          <span className="download06">
+            <img src="/img/QR_apple.png" />
+          </span>
         </SwiperSlide>
       </Swiper>
     </>
