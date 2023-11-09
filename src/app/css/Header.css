@@ -15,3 +15,25 @@
 .otoiawase:hover {
   box-shadow: none;
 }
+
+.otoiawase:active {
+  animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
