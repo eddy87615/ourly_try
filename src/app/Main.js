@@ -5,18 +5,48 @@ import './css/Main.css';
 import { TypeAnimation } from 'react-type-animation';
 import Typewriter from './Typewriter';
 
-//-----TYPING-----//
+// //-----TYPING-----//
 
-const TypeComponent = () => {
-  return (
-    <TypeAnimation
-      style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
-      sequence={[`どのグループに\n読まれているのか\nわかる`, 10000]}
-    />
-  );
-};
+// const TypeComponent = () => {
+//   return (
+//     <TypeAnimation
+//       style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
+//       sequence={[`どのグループに\n読まれているのか\nわかる`, 10000]}
+//     />
+//   );
+// };
 
-//-----TYPING-----//
+// //-----TYPING-----//
+
+const data = [
+  {
+    imgAnnoying: '/img/20Yman-02-bgN.png',
+    annoyingImgInfo: 'young man is annoyed',
+    imgSolved: '/img/20Yman-04-bgN.png',
+    solvedImgInfo: 'happy young man cause problems solved',
+    content: '私は会社のコミュニケーションについて悩んでいます…',
+    classAnnoying: 'annoyingman01',
+    classSolved: 'solvedman01',
+  },
+  {
+    imgAnnoying: '/img/30Yman-06.png',
+    annoyingImgInfo: '30y man is annoyed',
+    imgSolved: '/img/30Yman-04-bgN.png',
+    solvedImgInfo: 'happy 30y man cause problems solved',
+    content: '社内の雰囲気をもっと向上させたい…',
+    classAnnoying: 'annoyingman02',
+    classSolved: 'solvedman02',
+  },
+  {
+    imgAnnoying: '/img/30Ywoman-01-bgN-2.png',
+    annoyingImgInfo: 'young woman is annoyed',
+    imgSolved: '/img/30Ywoman-02-bgN-2.png',
+    solvedImgInfo: 'happy young woman cause problems solved',
+    content: '社内の雰囲気をもっと向上させたい…',
+    classAnnoying: 'annoyingwoman',
+    classSolved: 'solvedwoman',
+  },
+];
 
 const Section = ({
   imgAnnoying,
@@ -77,7 +107,7 @@ export default function Main() {
         annoyingImgInfo="young woman is annoyed"
         imgSolved="/img/30Ywoman-02-bgN-2.png"
         solvedImgInfo="happy young woman cause problems solved"
-        content="私も会社のコミュニケーションについて悩んでいます…"
+        content="社内の雰囲気をもっと向上させたい…"
         classAnnoying="annoyingwoman"
         classSolved="solvedwoman"
       />
