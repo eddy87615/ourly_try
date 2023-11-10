@@ -3,6 +3,7 @@ import Header from './Header';
 import Guide from './Guide';
 import Intro from './Intro';
 import Main from './Main';
+import Sub from './Sub';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Swiper />
       <Intro />
       <Main />
+      <Sub />
     </>
   );
 }
