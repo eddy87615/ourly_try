@@ -79,11 +79,11 @@ export default function Slider() {
         <SwiperSlide className={isMobile ? '' : 'page02'}>
           <div className="title02">
             <h1 className={isMobile ? 'text-[32px]' : ''}>
-              私はourlyで
+              ourlyを導入してから
               <br />
-              同僚の好き嫌いに合う社内報が
+              読みさすい社内報を
               <br />
-              簡単にできました！
+              簡単に作れるようになりました！
             </h1>
             <p>
               ourlyは、社員のエンゲージメントを向上させる、
@@ -106,7 +106,7 @@ export default function Slider() {
         <SwiperSlide className={isMobile ? '' : 'page03'}>
           <div className="title03">
             <h1 className={isMobile ? 'text-[32px]' : ''}>
-              私たちはourlyで
+              ourlyを導入してから
               <br />
               一体感が生まれました！
             </h1>
