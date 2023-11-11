@@ -48,12 +48,6 @@
   background-color: var(--ourly-theme);
 }
 
-h1 {
-  font-size: 48px;
-  font-weight: bold;
-
-  margin-bottom: 24px;
-}
 p {
   font-size: 24px;
 }

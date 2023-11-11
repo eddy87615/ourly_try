@@ -94,11 +94,11 @@ function SpeechBubble({ text, className }) {
   );
 }
 
-function Main() {
+export default function Main() {
   return (
     <main className="main">
       {data.map((personal, index) => (
-        <React.Fragment>
+        <React.Fragment key={`fragment-${index}`}>
           <div className={personal.classAnnoying} key={index}>
             <h2 className="text-[40px] font-bold">
               <span className="underLine">{personal.content}</span>
@@ -110,7 +110,7 @@ function Main() {
             <SpeechBubble text={personal.article03} className="left-[20%]" />
             <SpeechBubble text={personal.article04} className="left-[10%]" />
           </div>
-          <div className={personal.classSolved}>
+          <div className={personal.classSolved} key={personal}>
             <h2 className="text-[40px] text-center font-bold p-16">
               {personal.solvedTitle}
               <br />
@@ -127,5 +127,3 @@ function Main() {
     </main>
   );
 }
-
-export default Main;

@@ -4,17 +4,49 @@
 
 :root {
   --ourly-theme: #ff4448;
-  --base-color: '#F0F0FF';
-  --purple-dark: '#3F4066';
-  --purple-light: '#5A5B90';
+  --base-color: #f0f0ff;
+  --purple-dark: #3f4066;
+  --purple-light: #5a5b90;
 }
 
 .sub {
   width: 100%;
   height: 300svh;
+  background-color: var(--base-color);
+  position: relative;
+}
+.sub::before {
+  content: '';
+  background-image: url(/img/logo.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: 98% 2%;
+  background-size: 18%;
+  background-repeat: no-repeat;
+
+  opacity: 0.2;
 }
 
-.detail {
-  background-color: var(--ourly-theme);
+.detail-title {
   position: relative;
+}
+
+.titleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10%;
+}
+.title {
+  padding-top: 4%;
+  width: 400px;
+}
+.title img {
+  margin: auto;
+  width: 80%;
+}
+h3 {
+  color: var(--ourly-theme);
 }

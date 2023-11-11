@@ -52,7 +52,13 @@ export default function Slider() {
       >
         <SwiperSlide className={isMobile ? '' : 'page01'}>
           <div className="title01">
-            <h1 className={isMobile ? 'text-[32px]' : ''}>
+            <h1
+              className={
+                isMobile
+                  ? 'text-[32px] font-bold'
+                  : 'text-[48px] font-bold mb-6'
+              }
+            >
               ourlyを導入してから
               <br />
               会社に関する悩みが全部解決できました！
@@ -78,7 +84,13 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide className={isMobile ? '' : 'page02'}>
           <div className="title02">
-            <h1 className={isMobile ? 'text-[32px]' : ''}>
+            <h1
+              className={
+                isMobile
+                  ? 'text-[32px] font-bold'
+                  : 'text-[48px] font-bold mb-6'
+              }
+            >
               ourlyを導入してから
               <br />
               読みさすい社内報を
@@ -105,7 +117,13 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide className={isMobile ? '' : 'page03'}>
           <div className="title03">
-            <h1 className={isMobile ? 'text-[32px]' : ''}>
+            <h1
+              className={
+                isMobile
+                  ? 'text-[32px] font-bold'
+                  : 'text-[48px] font-bold mb-6'
+              }
+            >
               ourlyを導入してから
               <br />
               一体感が生まれました！

@@ -15,9 +15,9 @@ body {
 
 :root {
   --ourly-theme: #ff4448;
-  --base-color: '#F0F0FF';
-  --purple-dark: '#3F4066';
-  --purple-light: '#5A5B90';
+  --base-color: #f0f0ff;
+  --purple-dark: #3f4066;
+  --purple-light: #5a5b90;
 }
 
 .swiper-slide {

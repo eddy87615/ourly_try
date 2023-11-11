@@ -21,6 +21,12 @@ module.exports = {
       borderColor: {
         'ourly-theme': '#ff4448',
       },
+      backgroundColor: {
+        'ourly-theme': '#ff4448',
+        'base-color': '#F0F0FF',
+        'purple-dark': '#3F4066',
+        'purple-light': '#5A5B90',
+      },
       fontSize: {
         sm: '8px',
         md: '14px',
