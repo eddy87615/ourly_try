@@ -61,8 +61,8 @@ export default function Sub() {
               className={sec.class}
               key={index} // 使用 text 作为唯一的 key
               variants={itemVariants}
-              custom={1}
-              transition={{ delay: index * 0.5 }}
+              custom={2}
+              transition={{ delay: index * 0.8 }}
             >
               <img src={sec.img} alt={sec.imgAlt} />
               <motion.h3
