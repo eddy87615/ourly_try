@@ -98,7 +98,7 @@ function Main() {
   return (
     <main className="main">
       {data.map((personal, index) => (
-        <>
+        <React.Fragment>
           <div className={personal.classAnnoying} key={index}>
             <h2 className="text-[40px] font-bold">
               <span className="underLine">{personal.content}</span>
@@ -122,7 +122,7 @@ function Main() {
               className="w-[40%] text-[16px] leading-8 text-center flex justify-center m-auto"
             ></p>
           </div>
-        </>
+        </React.Fragment>
       ))}
     </main>
   );
