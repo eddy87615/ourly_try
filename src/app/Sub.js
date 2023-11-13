@@ -11,7 +11,7 @@ const content = [
     imgNum: '/img/01.svg',
     imgNumAlt: 'number 1',
     title: 'どの記事が<br />どのくらい読まれているか<br />わかる',
-    imgContent: '/img/analyze01.jpg',
+    imgContent: '/img/analyze01.png',
     imgimgContentAlt: 'ourly analysis function part one, about read condition',
     text: '記事ごとに算出された閲覧状況を、管理画面で一括確認できます。数値ベースの改善で「伝えたつもり」をなくします。PV数などの基本指標はもちろん、記事ごとに閲覧率・読了率・リアクション率などourly独自の指標でも分析できるのでより詳細に閲覧状況を把握できます。',
     bgimg: '/img/1-bg.svg',
@@ -21,7 +21,7 @@ const content = [
     imgNum: '/img/02.svg',
     imgAlt: 'number 2',
     title: 'どのグループに<br />読まれているのか<br />わかる',
-    imgContent: '/img/analyze02.jpg',
+    imgContent: '/img/analyze02.png',
     imgimgContentAlt:
       'ourly analysis function part two, about which grop read the article',
     text: '部署別・役職別・職種別など、さまざまなセグメントで閲覧状況を確認できます。<br />また、セグメントは拠点別、入社年数別など各企業ごとにカスタマイズできるので、組織を自由な角度から可視化することができます。',
@@ -32,7 +32,7 @@ const content = [
     imgNum: '/img/03.svg',
     imgAlt: 'number 3',
     title: 'どれほど<br />読まれるようになったのか<br />わかる',
-    imgContent: '/img/analyze03.jpg',
+    imgContent: '/img/analyze03.png',
     imgimgContentAlt:
       'ourly analysis function part three, the chart for the total codition to make you improve the articles',
     text: 'バブルチャートで閲覧状況の変化を直感的に確認できます。これにより社内報改善の成果が分かります。<br />また1ヶ月ごと、3ヶ月ごと、6ヶ月ごとに変化を確認できるため、どの期間でPDCAを回していくのか明確な目標を持って社内報改善に取り組めます。',

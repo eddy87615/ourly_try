@@ -98,7 +98,7 @@
   bottom: 0px;
   left: 8%;
 
-  background-image: url(/img/surprise.gif);
+  background-image: url(/img/surprise.png);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 30%;
@@ -209,26 +209,30 @@ h2 {
 .annoyingman01::before,
 .annoyingman02::before {
   content: '';
-  background-image: url(/img/question.gif);
+  background-image: url(/img/question.png);
   background-size: 80%;
   position: absolute;
   width: 30%;
   height: 30%;
   top: 0;
-  right: 0;
+  right: 2%;
   background-repeat: no-repeat;
   z-index: 2;
+
+  animation: question 1s infinite;
 }
 .annoyingwoman::before {
   content: '';
-  background-image: url(/img/question.gif);
+  background-image: url(/img/question.png);
   top: 0;
-  right: 0;
+  right: 8%;
   width: 30%;
   height: 100%;
   position: absolute;
   background-size: 80%;
   background-repeat: no-repeat;
+
+  animation: question 1s infinite;
 }
 
 .speech-bubble {
@@ -276,5 +280,17 @@ h2 {
   }
   100% {
     transform: translateX(0px);
+  }
+}
+
+@keyframes question {
+  0% {
+    transform: rotate(16deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(16deg);
   }
 }
