@@ -64,7 +64,7 @@ export default function Sub() {
   };
 
   return (
-    <div className="sub">
+    <div className="sub" name="section4">
       <h2 className="text-[40px] text-center font-bold p-16">
         ourlyも…
         <br />
@@ -117,52 +117,6 @@ export default function Sub() {
           </motion.div>
         ))}
       </div>
-
-      {/* <section className="detail-title">
-        <motion.div
-          ref={ref01}
-          className="titleSection"
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView01 ? 'visible' : 'hidden'}
-        >
-          {title.map((sec, index) => (
-            <motion.div
-              className={sec.class}
-              key={index} // 使用 text 作为唯一的 key
-              variants={itemVariants}
-              custom={1}
-              transition={{ delay: 0.8 + index * 0.5 }}
-            >
-              <img src={sec.img} alt={sec.imgAlt} />
-              <motion.h3
-                dangerouslySetInnerHTML={{ __html: sec.text }}
-                className="text-[32px] text-center font-bold pt-10"
-              ></motion.h3>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-      <section className="detail-content">
-        {detail.map((content, index) => (
-          <motion.div
-            ref={ref02}
-            key={index}
-            className="p-8 content-div"
-            variants={itemVariants}
-            custom={2}
-            transition={{ delay: 0.5 + index * 0.8 }}
-            initial="hidden"
-            animate={inView02 ? 'visible' : 'hidden'}
-          >
-            <img src={content.img} />
-            <p
-              dangerouslySetInnerHTML={{ __html: content.text }}
-              className="text-[16px] leading-[30px]"
-            ></p>
-          </motion.div>
-        ))}
-      </section> */}
     </div>
   );
 }

@@ -100,7 +100,11 @@ export default function Main() {
     <main className="main">
       {data.map((personal, index) => (
         <React.Fragment key={`fragment-${index}`}>
-          <div className={personal.classAnnoying} key={index}>
+          <div
+            className={personal.classAnnoying}
+            key={index}
+            name={`section${index + 1}`}
+          >
             <h2 className="text-[40px] font-bold">
               <span className="underLine">{personal.content}</span>
             </h2>

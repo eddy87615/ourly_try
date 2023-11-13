@@ -13,17 +13,28 @@
 
 .scroll-nav {
   position: fixed;
-  top: 50%;
+  height: 100%;
+  top: 0;
   left: 2%;
-  transform: translateY(-50%);
-  height: 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   z-index: 9;
+
+  /* display: none; */
+}
+.scroll-nav.visible {
+  display: flex; /* 顯示 */
 }
 
 .nav-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--ourly-theme);
+  width: 15px;
+  height: 15px;
+  background-color: #ffbbbd;
   border-radius: 50%;
+  margin: 16px 0;
+
+  cursor: pointer;
 }
