@@ -103,7 +103,7 @@ export default function Main() {
           <div
             className={personal.classAnnoying}
             key={index}
-            name={`section${index + 1}`}
+            id={`section${index + 1}`}
           >
             <h2 className="text-[40px] font-bold">
               <span className="underLine">{personal.content}</span>

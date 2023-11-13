@@ -23,9 +23,9 @@
 
   z-index: 9;
 
-  /* display: none; */
+  display: none;
 }
-.scroll-nav.visible {
+.scroll-nav-show {
   display: flex; /* 顯示 */
 }
 

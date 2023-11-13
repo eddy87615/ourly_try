@@ -64,7 +64,7 @@ export default function Sub() {
   };
 
   return (
-    <div className="sub" name="section4">
+    <div className="sub" id="section4">
       <h2 className="text-[40px] text-center font-bold p-16">
         ourlyも…
         <br />
