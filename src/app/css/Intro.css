@@ -57,14 +57,15 @@
   content: '';
   background-image: url(/img/personal-05-bgN.png);
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-position: 100% 100%;
+  background-size: 100%;
 
-  width: 50%;
+  width: 40%;
   height: 100%;
 
   position: absolute;
   bottom: 0px;
-  left: 10%;
+  left: 8%;
 }
 
 .intro-text {

@@ -35,7 +35,7 @@ const content = [
     imgContent: '/img/analyze03.jpg',
     imgimgContentAlt:
       'ourly analysis function part three, the chart for the total codition to make you improve the articles',
-    text: 'バブルチャートで閲覧状況の変化を直感的に確認できます。これにより社内報改善の成果が分かります。また1ヶ月ごと、3ヶ月ごと、6ヶ月ごとに変化を確認できるため、どの期間でPDCAを回していくのか明確な目標を持って社内報改善に取り組めます。',
+    text: 'バブルチャートで閲覧状況の変化を直感的に確認できます。これにより社内報改善の成果が分かります。<br />また1ヶ月ごと、3ヶ月ごと、6ヶ月ごとに変化を確認できるため、どの期間でPDCAを回していくのか明確な目標を持って社内報改善に取り組めます。',
     bgimg: '/img/3-bg.svg',
     bgimgAlt: 'Number three background pic.',
   },
@@ -80,7 +80,7 @@ export default function Sub() {
             variants={itemVariants}
             initial="hidden"
             animate={inView01 ? 'visible' : 'hidden'}
-            transition={{ delay: index * 0.8 }}
+            transition={{ delay: index * 0.5 }}
           >
             <>
               <motion.div
@@ -88,7 +88,7 @@ export default function Sub() {
                 variants={titleVariants}
                 initial="hidden"
                 animate={inView01 ? 'visible' : 'hidden'}
-                transition={{ delay: index * 0.9, duration: 1 }}
+                transition={{ delay: index * 0.9, duration: 0.5 }}
               >
                 <ul className="title">
                   <li>
