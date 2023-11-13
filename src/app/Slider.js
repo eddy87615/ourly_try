@@ -71,10 +71,7 @@ export default function Slider() {
           </div>
           <span className="triangle01"></span>
           <span className="triangle02"></span>
-          <img
-            src={isMobile ? '/img/phone-KV01.png' : '/img/office-bg.jpg'}
-            className="KV"
-          />
+          <img src="/img/office-bg.jpg" className="KV" />
           <span className="download01">
             <img src="/img/QR_google.png" />
           </span>
@@ -105,9 +102,7 @@ export default function Slider() {
           </div>
           <span className="triangle03"></span>
           <span className="triangle04"></span>
-          <img
-            src={isMobile ? '/img/phone-KV02.png' : '/img/30Ywoman-04-bg.jpg'}
-          />
+          <img src="/img/30Ywoman-04-bg.jpg" />
           <span className="download03">
             <img src="/img/QR_google.png" />
           </span>
@@ -136,9 +131,7 @@ export default function Slider() {
           </div>
           <span className="triangle05"></span>
           <span className="triangle06"></span>
-          <img
-            src={isMobile ? '/img/phone-KV03.png' : '/img/happypeople-bg.png'}
-          />
+          <img src="/img/happypeople-bg.png" />
           <span className="download05">
             <img src="/img/QR_google.png" />
           </span>
