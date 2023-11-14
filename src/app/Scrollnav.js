@@ -10,6 +10,7 @@ import {
   animateScroll as scroll,
   scrollSPy,
 } from 'react-scroll';
+import _debounce from 'lodash/debounce';
 
 const scrollnav = [
   {
@@ -73,7 +74,7 @@ export default function Scrollnav() {
       Events.scrollEvent.remove('end');
     };
   }, []);
-  const handleScroll = () => {
+  const handleScroll = _debounce(() => {
     //Topから50%になったら表示する
     if (window.scrollY > window.innerHeight / 2) {
       setShowNav(true);
@@ -82,7 +83,7 @@ export default function Scrollnav() {
     }
 
     //今のところを検査してactivesectionを設置
-    const scrollPotion = window.scrollY + window.innerHeight / 2;
+    const scrollPotion = window.scrollY + window.innerHeight;
     const section = [
       'top',
       'slider',
@@ -97,7 +98,6 @@ export default function Scrollnav() {
     ];
     for (let i = 0; i < section.length; i++) {
       const element = document.getElementById(section[i]);
-      console.log(element);
       if (
         element &&
         element.offsetTop <= scrollPotion &&
@@ -107,7 +107,8 @@ export default function Scrollnav() {
         break;
       }
     }
-  };
+  }, 50);
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     //Effectを削除
@@ -117,7 +118,7 @@ export default function Scrollnav() {
   }, []);
 
   return (
-    <nav className="scroll-nav">
+    <nav className={`scroll-nav ${showNav ? '' : 'scroll-nav-hide'}`}>
       <ul>
         <li className="nav-dot">
           <Link to="slider" spy={true} smooth={true} offset={0} duration={500}>
@@ -127,6 +128,72 @@ export default function Scrollnav() {
         <li className="nav-dot">
           <Link
             to="section1"
+            spy={true}
+            smooth={true}
+            offset={70}
+            duration={500}
+          >
+            SECTION1
+          </Link>
+        </li>
+        <li className="nav-dot">
+          <Link
+            to="section2"
+            spy={true}
+            smooth={true}
+            offset={70}
+            duration={500}
+          >
+            SECTION1
+          </Link>
+        </li>
+        <li className="nav-dot">
+          <Link
+            to="section3"
+            spy={true}
+            smooth={true}
+            offset={70}
+            duration={500}
+          >
+            SECTION1
+          </Link>
+        </li>
+        <li className="nav-dot">
+          <Link
+            to="section4"
+            spy={true}
+            smooth={true}
+            offset={70}
+            duration={500}
+          >
+            SECTION1
+          </Link>
+        </li>
+        <li className="nav-dot">
+          <Link
+            to="section5"
+            spy={true}
+            smooth={true}
+            offset={70}
+            duration={500}
+          >
+            SECTION1
+          </Link>
+        </li>
+        <li className="nav-dot">
+          <Link
+            to="section6"
+            spy={true}
+            smooth={true}
+            offset={70}
+            duration={500}
+          >
+            SECTION1
+          </Link>
+        </li>
+        <li className="nav-dot">
+          <Link
+            to="section7"
             spy={true}
             smooth={true}
             offset={70}
