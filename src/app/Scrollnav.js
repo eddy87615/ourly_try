@@ -3,6 +3,13 @@ import React from 'react';
 import './css/globals.css';
 import './css/Scrollnav.css';
 import { useState, useEffect } from 'react';
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSPy,
+} from 'react-scroll';
 
 const scrollnav = [
   {
@@ -49,26 +56,86 @@ const scrollnav = [
 
 export default function Scrollnav() {
   const [showNav, setShowNav] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition =
-        window.scrollY || document.documentElement.scrollTop;
-      setShowNav(scrollPosition > window.innerHeight / 2);
+    //Scrollのリスニング
+    Events.scrollEvent.register('begin', function (to, element) {
+      console.log('begin', arguments);
+    });
+    Events.scrollEvent.register('end', function (to, element) {
+      console.log('end', arguments);
+    });
+
+    //Scrollリスニングを解除
+    return () => {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
     };
+  }, []);
+  const handleScroll = () => {
+    //Topから50%になったら表示する
+    if (window.scrollY > window.innerHeight / 2) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
+
+    //今のところを検査してactivesectionを設置
+    const scrollPotion = window.scrollY + window.innerHeight / 2;
+    const section = [
+      'top',
+      'slider',
+      'section0',
+      'section1',
+      'section2',
+      'section3',
+      'section4',
+      'section5',
+      'section6',
+      'section7',
+    ];
+    for (let i = 0; i < section.length; i++) {
+      const element = document.getElementById(section[i]);
+      console.log(element);
+      if (
+        element &&
+        element.offsetTop <= scrollPotion &&
+        element.offsetTop + element.offsetHeight > scrollPotion
+      ) {
+        setActiveSection(section[i]);
+        break;
+      }
+    }
+  };
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    //Effectを削除
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <ul className={`scroll-nav ${showNav ? 'scroll-nav-show' : ''}`}>
-      {scrollnav.map((nav, index) => (
-        <a href={nav.link} key={index}>
-          <li className="nav-dot"></li>
-        </a>
-      ))}
-    </ul>
+    <nav className="scroll-nav">
+      <ul>
+        <li className="nav-dot">
+          <Link to="slider" spy={true} smooth={true} offset={0} duration={500}>
+            TOP
+          </Link>
+        </li>
+        <li className="nav-dot">
+          <Link
+            to="section1"
+            spy={true}
+            smooth={true}
+            offset={70}
+            duration={500}
+          >
+            SECTION1
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 }

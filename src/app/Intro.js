@@ -4,7 +4,7 @@ import './css/Intro.css';
 
 export default function Intro() {
   return (
-    <div className="intro">
+    <div className="intro" id="section0">
       <p className="text-[40px] font-bold intro-text">
         <span className=" span span01 text-[32px] font-semibold">
           会社の雰囲気を改善したい…

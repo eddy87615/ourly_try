@@ -49,6 +49,7 @@ export default function Slider() {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
+        id="slider"
       >
         <SwiperSlide className={isMobile ? '' : 'page01'}>
           <div className="title01">
