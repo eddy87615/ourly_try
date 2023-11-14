@@ -107,7 +107,7 @@ export default function Scrollnav() {
         break;
       }
     }
-  }, 50);
+  }, 10);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
