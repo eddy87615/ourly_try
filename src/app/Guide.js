@@ -105,7 +105,7 @@ export default function Guide() {
           </div>
         </div>
         <button
-          className="open text-[18px]"
+          className="open text-[18px] font-bold"
           onClick={() => {
             handleOpen();
             handleTop();

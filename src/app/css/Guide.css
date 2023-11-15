@@ -24,7 +24,7 @@
 
   overflow: hidden;
 
-  display: none;
+  /* display: none; */
 }
 
 .guide-open {
@@ -124,7 +124,7 @@
   transform: translateY(-50px);
   transition: transform 1s ease;
 
-  margin-top: -8%;
+  margin-top: -4%;
 }
 
 .open {
