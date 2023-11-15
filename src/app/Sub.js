@@ -11,7 +11,7 @@ const content = [
     imgNum: '/img/01.svg',
     imgNumAlt: 'number 1',
     title: 'どの記事が<br />どのくらい読まれているか<br />わかる',
-    imgContent: '/img/analyze01.png',
+    imgContent: '/img/analyze01.webp',
     imgimgContentAlt: 'ourly analysis function part one, about read condition',
     text: '記事ごとに算出された閲覧状況を、管理画面で一括確認できます。数値ベースの改善で「伝えたつもり」をなくします。PV数などの基本指標はもちろん、記事ごとに閲覧率・読了率・リアクション率などourly独自の指標でも分析できるのでより詳細に閲覧状況を把握できます。',
     bgimg: '/img/1-bg.svg',

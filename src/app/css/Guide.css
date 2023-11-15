@@ -76,7 +76,7 @@
 }
 .guide01::after {
   content: '';
-  background: url(/img/20Yman-02-bgN.png);
+  background: url(/img/20Yman-02-bgN.webp);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
@@ -88,7 +88,7 @@
 }
 .guide02::after {
   content: '';
-  background: url(/img/30Yman-02-bgN.png);
+  background: url(/img/30Yman-02-bgN.webp);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
@@ -99,7 +99,7 @@
 }
 .guide03::after {
   content: '';
-  background: url(/img/30Ywoman-01-bgN-2.png);
+  background: url(/img/30Ywoman-01-bgN-2.webp);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;

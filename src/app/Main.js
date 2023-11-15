@@ -23,9 +23,9 @@ import { motion } from 'framer-motion';
 
 const data = [
   {
-    imgAnnoying: '/img/20Yman-02-bgN.png',
+    imgAnnoying: '/img/20Yman-02-bgN.webp',
     annoyingImgInfo: 'young man is annoyed',
-    imgSolved: '/img/20Yman-04-bgN.png',
+    imgSolved: '/img/20Yman-04-bgN.webp',
     solvedImgInfo: 'happy young man cause problems solved',
     content: '私は会社のコミュニケーションについて悩んでいます…',
     article01: '会社の最新情報をキャッチしたい…',
@@ -40,9 +40,9 @@ const data = [
       '部署や年齢を超えた、意外な繋がりを無数に生み出すSNSのようなUIを設計しました。<br />特にブロックごとのリアクション・コメント機能が、小さなコミュニケーションの発生を見逃しません。',
   },
   {
-    imgAnnoying: '/img/30Yman-06.png',
+    imgAnnoying: '/img/30Yman-06.webp',
     annoyingImgInfo: '30y man is annoyed',
-    imgSolved: '/img/30Yman-04-bgN.png',
+    imgSolved: '/img/30Yman-04-bgN.webp',
     solvedImgInfo: 'happy 30y man cause problems solved',
     content: '社内の雰囲気をもっと向上させたい…',
     article01: '私の声がちゃんと届いているのか知りたい…',
@@ -57,9 +57,9 @@ const data = [
       '月1回の定例・レポーティングを実施しています。<br />社内報の閲覧状況や前月からの変化などのデータを見ながら、インナーコミュニケーション分野に<br />携わってきたプロフェッショナルが、各担当者様や企業様が抱えていらっしゃる課題に沿って振り返りと次のアクションをご提案いたします。<br />もちろん定例以外にもお困りの際は、その都度サポートさせていただきます。',
   },
   {
-    imgAnnoying: '/img/30Ywoman-01-bgN-2.png',
+    imgAnnoying: '/img/30Ywoman-01-bgN-2.webp',
     annoyingImgInfo: 'young woman is annoyed',
-    imgSolved: '/img/30Ywoman-02-bgN-2.png',
+    imgSolved: '/img/30Ywoman-02-bgN-2.webp',
     solvedImgInfo: 'happy young woman cause problems solved',
     content: '私は皆んなの好みに合う社内報を作りたい…',
     article01: '皆んなはどんな内容が好きですか？',

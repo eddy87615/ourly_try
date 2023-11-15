@@ -85,7 +85,7 @@
 
   position: relative;
 
-  background-image: url(/img/communication.jpg);
+  background-image: url(/img/communication.webp);
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 80% 90%;
@@ -98,7 +98,7 @@
   bottom: 0px;
   left: 8%;
 
-  background-image: url(/img/surprise.png);
+  background-image: url(/img/surprise.webp);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 30%;
@@ -111,7 +111,7 @@
 
   position: relative;
 
-  background-image: url(/img/report.jpg);
+  background-image: url(/img/report.webp);
   background-repeat: no-repeat;
   background-size: 38%;
   background-position: 90% 90%;
@@ -152,7 +152,7 @@
 .solvedwoman::after {
   content: '';
   position: absolute;
-  background-image: url(/img/KViphone.png);
+  background-image: url(/img/KViphone.webp);
   top: 42%;
   right: 43%;
   background-size: 80%;
@@ -209,7 +209,7 @@ h2 {
 .annoyingman01::before,
 .annoyingman02::before {
   content: '';
-  background-image: url(/img/question.png);
+  background-image: url(/img/question.webp);
   background-size: 80%;
   position: absolute;
   width: 30%;
@@ -223,7 +223,7 @@ h2 {
 }
 .annoyingwoman::before {
   content: '';
-  background-image: url(/img/question.png);
+  background-image: url(/img/question.webp);
   top: 0;
   right: 8%;
   width: 30%;

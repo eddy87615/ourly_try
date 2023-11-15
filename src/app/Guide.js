@@ -53,7 +53,7 @@ export default function Guide() {
       <div className={`guide fixed ${isOpen ? 'guide-open' : ''}`}>
         <div className="header fixed top-0 left-0 z-10 p-8">
           <a href="https://service.ourly.jp/">
-            <img src="/img/ourly_logo_w600.png" className="w-56" />
+            <img src="/img/ourly_logo_w600.webp" className="w-56" />
           </a>
         </div>
         <p className="text-[48px] font-bold guide-title">
