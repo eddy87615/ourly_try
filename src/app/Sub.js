@@ -21,7 +21,7 @@ const content = [
     imgNum: '/img/02.svg',
     imgAlt: 'number 2',
     title: 'どのグループに<br />読まれているのか<br />わかる',
-    imgContent: '/img/analyze02.png',
+    imgContent: '/img/analyze02.webp',
     imgimgContentAlt:
       'ourly analysis function part two, about which grop read the article',
     text: '部署別・役職別・職種別など、さまざまなセグメントで閲覧状況を確認できます。<br />また、セグメントは拠点別、入社年数別など各企業ごとにカスタマイズできるので、組織を自由な角度から可視化することができます。',
@@ -32,7 +32,7 @@ const content = [
     imgNum: '/img/03.svg',
     imgAlt: 'number 3',
     title: 'どれほど<br />読まれるようになったのか<br />わかる',
-    imgContent: '/img/analyze03.png',
+    imgContent: '/img/analyze03.webp',
     imgimgContentAlt:
       'ourly analysis function part three, the chart for the total codition to make you improve the articles',
     text: 'バブルチャートで閲覧状況の変化を直感的に確認できます。これにより社内報改善の成果が分かります。<br />また1ヶ月ごと、3ヶ月ごと、6ヶ月ごとに変化を確認できるため、どの期間でPDCAを回していくのか明確な目標を持って社内報改善に取り組めます。',
@@ -43,19 +43,19 @@ const content = [
 
 const subEndDiv = [
   {
-    img: '/img/30Yman-01-bgN.png',
+    img: '/img/30Yman-01-bgN.webp',
     alt: '30 years old man feels happy about problems sloved with ourly',
     text: '私の声が伝わっているのがわかりました！',
     class: 'subend01',
   },
   {
-    img: '/img/30Ywoman-03bgN.png',
+    img: '/img/30Ywoman-03bgN.webp',
     alt: '30 years old woman feels happy about problems sloved with ourly',
     text: 'みんなの好みに合う社内報が作れるようになった！',
     class: 'subend02',
   },
   {
-    img: '/img/20Yman-01-bgN.png',
+    img: '/img/20Yman-01-bgN.webp',
     alt: '20 years old man feels happy about problems sloved with ourly',
     text: 'いつでも会社とつながっていて帰属意識を感じました！',
     class: 'subend03',
@@ -164,7 +164,7 @@ export default function Sub({ subEndDiv }) {
           animate={inView03 ? 'visible' : 'hidden'}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <img src="/img/30Yman-01-bgN.png" alt="" />
+          <img src="/img/30Yman-01-bgN.webp" alt="" />
           <p className="text-[40px] font-bold">
             私の声が伝わっているのがわかりました！
           </p>
@@ -177,7 +177,7 @@ export default function Sub({ subEndDiv }) {
           animate={inView04 ? 'visible' : 'hidden'}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <img src="/img/30Ywoman-03bgN.png" alt="" />
+          <img src="/img/30Ywoman-03bgN.webp" alt="" />
           <p className="text-[40px] font-bold">
             私の声が伝わっているのがわかりました！
           </p>
@@ -190,7 +190,7 @@ export default function Sub({ subEndDiv }) {
           animate={inView05 ? 'visible' : 'hidden'}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <img src="/img/20Yman-01-bgN.png" alt="" />
+          <img src="/img/20Yman-01-bgN.webp" alt="" />
           <p className="text-[40px] font-bold">
             私の声が伝わっているのがわかりました！
           </p>
@@ -212,7 +212,7 @@ export default function Sub({ subEndDiv }) {
               <img src="/img/hexagon-O.svg" />
             </div>
           </div>
-          <img src="/img/20Yman-05-bgN.png" />
+          <img src="/img/20Yman-05-bgN.webp" />
         </li>
       </ul>
     </div>
