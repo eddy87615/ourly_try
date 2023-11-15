@@ -130,7 +130,7 @@ export default function Scrollnav() {
             to="section1"
             spy={true}
             smooth={true}
-            offset={70}
+            offset={0}
             duration={500}
           >
             SECTION1
@@ -141,7 +141,7 @@ export default function Scrollnav() {
             to="section2"
             spy={true}
             smooth={true}
-            offset={70}
+            offset={0}
             duration={500}
           >
             SECTION1
@@ -152,7 +152,7 @@ export default function Scrollnav() {
             to="section3"
             spy={true}
             smooth={true}
-            offset={70}
+            offset={0}
             duration={500}
           >
             SECTION1
@@ -163,7 +163,7 @@ export default function Scrollnav() {
             to="section4"
             spy={true}
             smooth={true}
-            offset={70}
+            offset={0}
             duration={500}
           >
             SECTION1
@@ -174,7 +174,7 @@ export default function Scrollnav() {
             to="section5"
             spy={true}
             smooth={true}
-            offset={70}
+            offset={0}
             duration={500}
           >
             SECTION1
@@ -185,7 +185,7 @@ export default function Scrollnav() {
             to="section6"
             spy={true}
             smooth={true}
-            offset={70}
+            offset={0}
             duration={500}
           >
             SECTION1
@@ -196,7 +196,7 @@ export default function Scrollnav() {
             to="section7"
             spy={true}
             smooth={true}
-            offset={70}
+            offset={0}
             duration={500}
           >
             SECTION1
