@@ -90,6 +90,9 @@ export default function Sub() {
   // const inView04 = useInView(ref04, { once: true });
   // const inView05 = useInView(ref05, { once: true });
 
+  console.log('refs.ref04:', refs.ref04);
+  console.log('inViews.inView04:', inViews.inView04);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -174,11 +177,15 @@ export default function Sub() {
             key={index}
             ref={refs[`ref0${index + 3}`]} // Dynamic ref based on index
             variants={
-              refs.ref04 && inViews.inView04 ? rightVariants : leftVariants
+              inViews.inView03 &&
+              refs.ref04 &&
+              refs[`ref0${index + 3}`] === refs.ref04
+                ? rightVariants
+                : leftVariants
             } // Check inView to determine variants
             initial="hidden"
             animate={inViews[`inView0${index + 3}`] ? 'visible' : 'hidden'} // Dynamic inView based on index
-            transition={{ delay: 0.5, duration: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
           >
             <img src={item.img} alt={item.alt} />
             <p className="text-[40px] font-bold">{item.text}</p>
