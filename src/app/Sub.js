@@ -157,7 +157,7 @@ export default function Sub({ subEndDiv }) {
       </div>
       <ul className="h-full ">
         <motion.li
-          className="flex w-full h-1/3 px-[10%] subend01"
+          className="flex w-full h-1/3 px-[12%] subend01"
           ref={ref03}
           variants={subEndDivsLeft}
           initial="hidden"
@@ -170,7 +170,7 @@ export default function Sub({ subEndDiv }) {
           </p>
         </motion.li>
         <motion.li
-          className="flex w-full h-1/3 px-[10%] subend02"
+          className="flex w-full h-1/3 px-[12%] subend02"
           ref={ref04}
           variants={subEndDivsRight}
           initial="hidden"
@@ -183,7 +183,7 @@ export default function Sub({ subEndDiv }) {
           </p>
         </motion.li>
         <motion.li
-          className="flex w-full h-1/3 px-[10%] subend03"
+          className="flex w-full h-1/3 px-[12%] subend03"
           ref={ref05}
           variants={subEndDivsLeft}
           initial="hidden"
