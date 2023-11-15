@@ -62,21 +62,33 @@ const subEndDiv = [
   },
 ];
 
-export default function Sub({ subEndDiv }) {
-  // const refs = Array.from({ length: 6 }, (_, index) => React.createRef());
-  // console.log(refs[2]);
-  const ref01 = useRef(null);
-  const ref02 = useRef(null);
-  const ref03 = useRef(null);
-  const ref04 = useRef(null);
-  const ref05 = useRef(null);
+export default function Sub() {
+  // const refs = Array.from({ length: 8 }, (_, index) => React.createRef());
+  const refs = {
+    ref01: useRef(null),
+    ref02: useRef(null),
+    ref03: useRef(null),
+    ref04: useRef(null),
+    ref05: useRef(null),
+  };
+  // const ref01 = useRef(null);
+  // const ref02 = useRef(null);
+  // const ref03 = useRef(null);
+  // const ref04 = useRef(null);
+  // const ref05 = useRef(null);
   // const inViews = refs.map((ref) => useInView(ref, { once: true }));
-
-  const inView01 = useInView(ref01, { once: true });
-  const inView02 = useInView(ref02, { once: true });
-  const inView03 = useInView(ref03, { once: true });
-  const inView04 = useInView(ref04, { once: true });
-  const inView05 = useInView(ref05, { once: true });
+  const inViews = {
+    inView01: useInView(refs.ref01, { once: true }),
+    inView02: useInView(refs.ref02, { once: true }),
+    inView03: useInView(refs.ref03, { once: true }),
+    inView04: useInView(refs.ref04, { once: true }),
+    inView05: useInView(refs.ref05, { once: true }),
+  };
+  // const inView01 = useInView(ref01, { once: true });
+  // const inView02 = useInView(ref02, { once: true });
+  // const inView03 = useInView(ref03, { once: true });
+  // const inView04 = useInView(ref04, { once: true });
+  // const inView05 = useInView(ref05, { once: true });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -92,11 +104,11 @@ export default function Sub({ subEndDiv }) {
     visible: { opacity: 1 },
   };
 
-  const subEndDivsLeft = {
+  const leftVariants = {
     hidden: { x: 1 * -100, opacity: 0 },
     visible: { x: 0, opacity: 1 },
   };
-  const subEndDivsRight = {
+  const rightVariants = {
     hidden: { x: 1 * 100, opacity: 0 },
     visible: { x: 0, opacity: 1 },
   };
@@ -114,18 +126,18 @@ export default function Sub({ subEndDiv }) {
           <motion.div
             className="content-div"
             key={index}
-            ref={ref01}
+            ref={refs.ref01}
             variants={itemVariants}
             initial="hidden"
-            animate={inView01 ? 'visible' : 'hidden'}
-            transition={{ delay: index * 0.5 }}
+            animate={inViews.inView01 ? 'visible' : 'hidden'}
+            transition={{ delay: index * 0.3 }}
           >
             <div>
               <motion.div
-                ref={ref02}
+                ref={refs.ref02}
                 variants={titleVariants}
                 initial="hidden"
-                animate={inView02 ? 'visible' : 'hidden'}
+                animate={inViews.inView02 ? 'visible' : 'hidden'}
                 transition={{ delay: index * 0.7, duration: 0.5 }}
               >
                 <ul className="title">
@@ -156,7 +168,24 @@ export default function Sub({ subEndDiv }) {
         ))}
       </div>
       <ul className="h-full ">
-        <motion.li
+        {subEndDiv.map((item, index) => (
+          <motion.li
+            className={item.class}
+            key={index}
+            ref={refs[`ref0${index + 3}`]} // Dynamic ref based on index
+            variants={
+              refs.ref04 && inViews.inView04 ? rightVariants : leftVariants
+            } // Check inView to determine variants
+            initial="hidden"
+            animate={inViews[`inView0${index + 3}`] ? 'visible' : 'hidden'} // Dynamic inView based on index
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+            <img src={item.img} alt={item.alt} />
+            <p className="text-[40px] font-bold">{item.text}</p>
+          </motion.li>
+        ))}
+
+        {/* <motion.li
           className="flex w-full h-1/3 px-[12%] subend01"
           ref={ref03}
           variants={subEndDivsLeft}
@@ -194,7 +223,7 @@ export default function Sub({ subEndDiv }) {
           <p className="text-[40px] font-bold">
             私の声が伝わっているのがわかりました！
           </p>
-        </motion.li>
+        </motion.li> */}
         <li className="h-screen function">
           <h3 className="text-[32px] font-bold text-center pt-16">機能一覧</h3>
           <div className="hexagon">
