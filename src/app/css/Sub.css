@@ -17,7 +17,7 @@
   background-color: var(--base-color);
   position: relative;
 
-  padding-bottom: 4%;
+  /* padding-bottom: 4%; */
 }
 
 .container {
@@ -27,6 +27,8 @@
   gap: 24px;
 
   margin: 0 auto;
+
+  padding-bottom: 10%;
 }
 .content-div:hover {
   transform: scale(1.1) !important;
@@ -43,7 +45,7 @@
   margin: auto;
   width: 60%;
 }
-h3 {
+.title h3 {
   color: var(--ourly-theme);
 }
 
@@ -82,4 +84,109 @@ h3 {
   padding: 16px;
 
   transition-duration: 0.5s;
+}
+
+.subend01 {
+  background-color: var(--purple-light);
+  position: relative;
+  display: flex;
+  justify-content: right;
+  height: 400px;
+
+  background-image: url(/img/logo-LP.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+.subend01 img {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  width: 35%;
+}
+.subend01 p {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.subend02 {
+  background-color: var(--base-color);
+  position: relative;
+  display: flex;
+  justify-content: left;
+  height: 400px;
+
+  background-image: url(/img/logo-P.svg);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+.subend02 img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+}
+.subend02 p {
+  display: flex;
+  align-items: center;
+}
+
+.subend03 {
+  background-color: var(--purple-dark);
+  position: relative;
+  display: flex;
+  justify-content: right;
+  height: 400px;
+
+  background-image: url(/img/logo-LP.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+.subend03 img {
+  position: absolute;
+  left: 10%;
+  bottom: 0%;
+  width: 26%;
+}
+.subend03 p {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.function {
+  background-color: #fff;
+  position: relative;
+}
+.function img {
+  width: 12%;
+}
+.function > img {
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.hexagon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 10%;
+}
+
+.hexagon01 {
+  display: flex;
+  justify-content: center;
+}
+.hexagon02 {
+  display: flex;
+  justify-content: center;
+  margin-top: -24px;
+}
+.hexagon03 {
+  display: flex;
+  justify-content: center;
+  margin-top: -24px;
 }

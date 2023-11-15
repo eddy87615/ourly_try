@@ -41,13 +41,42 @@ const content = [
   },
 ];
 
-const detail = [{}, {}, {}];
+const subEndDiv = [
+  {
+    img: '/img/30Yman-01-bgN.png',
+    alt: '30 years old man feels happy about problems sloved with ourly',
+    text: '私の声が伝わっているのがわかりました！',
+    class: 'subend01',
+  },
+  {
+    img: '/img/30Ywoman-03bgN.png',
+    alt: '30 years old woman feels happy about problems sloved with ourly',
+    text: 'みんなの好みに合う社内報が作れるようになった！',
+    class: 'subend02',
+  },
+  {
+    img: '/img/20Yman-01-bgN.png',
+    alt: '20 years old man feels happy about problems sloved with ourly',
+    text: 'いつでも会社とつながっていて帰属意識を感じました！',
+    class: 'subend03',
+  },
+];
 
-export default function Sub() {
+export default function Sub({ subEndDiv }) {
+  // const refs = Array.from({ length: 6 }, (_, index) => React.createRef());
+  // console.log(refs[2]);
   const ref01 = useRef(null);
   const ref02 = useRef(null);
+  const ref03 = useRef(null);
+  const ref04 = useRef(null);
+  const ref05 = useRef(null);
+  // const inViews = refs.map((ref) => useInView(ref, { once: true }));
+
   const inView01 = useInView(ref01, { once: true });
   const inView02 = useInView(ref02, { once: true });
+  const inView03 = useInView(ref03, { once: true });
+  const inView04 = useInView(ref04, { once: true });
+  const inView05 = useInView(ref05, { once: true });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -61,6 +90,15 @@ export default function Sub() {
   const titleVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
+  };
+
+  const subEndDivsLeft = {
+    hidden: { x: 1 * -100, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+  };
+  const subEndDivsRight = {
+    hidden: { x: 1 * 100, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
   };
 
   return (
@@ -82,13 +120,13 @@ export default function Sub() {
             animate={inView01 ? 'visible' : 'hidden'}
             transition={{ delay: index * 0.5 }}
           >
-            <>
+            <div>
               <motion.div
                 ref={ref02}
                 variants={titleVariants}
                 initial="hidden"
-                animate={inView01 ? 'visible' : 'hidden'}
-                transition={{ delay: index * 0.9, duration: 0.5 }}
+                animate={inView02 ? 'visible' : 'hidden'}
+                transition={{ delay: index * 0.7, duration: 0.5 }}
               >
                 <ul className="title">
                   <li>
@@ -113,10 +151,70 @@ export default function Sub() {
                   </li>
                 </ul>
               </motion.div>
-            </>
+            </div>
           </motion.div>
         ))}
       </div>
+      <ul className="h-full ">
+        <motion.li
+          className="flex w-full h-1/3 px-[10%] subend01"
+          ref={ref03}
+          variants={subEndDivsLeft}
+          initial="hidden"
+          animate={inView03 ? 'visible' : 'hidden'}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <img src="/img/30Yman-01-bgN.png" alt="" />
+          <p className="text-[40px] font-bold">
+            私の声が伝わっているのがわかりました！
+          </p>
+        </motion.li>
+        <motion.li
+          className="flex w-full h-1/3 px-[10%] subend02"
+          ref={ref04}
+          variants={subEndDivsRight}
+          initial="hidden"
+          animate={inView04 ? 'visible' : 'hidden'}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <img src="/img/30Ywoman-03bgN.png" alt="" />
+          <p className="text-[40px] font-bold">
+            私の声が伝わっているのがわかりました！
+          </p>
+        </motion.li>
+        <motion.li
+          className="flex w-full h-1/3 px-[10%] subend03"
+          ref={ref05}
+          variants={subEndDivsLeft}
+          initial="hidden"
+          animate={inView05 ? 'visible' : 'hidden'}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <img src="/img/20Yman-01-bgN.png" alt="" />
+          <p className="text-[40px] font-bold">
+            私の声が伝わっているのがわかりました！
+          </p>
+        </motion.li>
+        <li className="h-screen function">
+          <h3 className="text-[32px] font-bold text-center pt-16">機能一覧</h3>
+          <div className="hexagon">
+            <div className="hexagon01">
+              <img src="/img/hexagon-O.svg" />
+              <img src="/img/hexagon-B.svg" />
+            </div>
+            <div className="hexagon02">
+              <img src="/img/hexagon-T.svg" />
+              <img src="/img/hexagon-R.svg" />
+              <img src="/img/hexagon-G.svg" />
+            </div>
+            <div className="hexagon03">
+              <img src="/img/hexagon-P.svg" />
+              <img src="/img/hexagon-O.svg" />
+            </div>
+          </div>
+          <img src="/img/20Yman-05-bgN.png" />
+        </li>
+      </ul>
     </div>
   );
 }
