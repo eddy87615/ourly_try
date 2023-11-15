@@ -4,7 +4,7 @@ import './css/globals.css';
 import './css/Scrollnav.css';
 import { useState, useEffect } from 'react';
 import {
-  Link,
+  Link as ScrollLink,
   Element,
   Events,
   animateScroll as scroll,
@@ -83,11 +83,9 @@ export default function Scrollnav() {
     }
 
     //今のところを検査してactivesectionを設置
-    const scrollPotion = window.scrollY + window.innerHeight;
+    const scrollPosition = window.scrollY + window.innerHeight;
     const section = [
       'top',
-      'slider',
-      'section0',
       'section1',
       'section2',
       'section3',
@@ -96,12 +94,14 @@ export default function Scrollnav() {
       'section6',
       'section7',
     ];
+    const scrollPositionTop = window.scrollY;
+    const scrollPositionBottom = window.scrollY + window.innerHeight;
     for (let i = 0; i < section.length; i++) {
       const element = document.getElementById(section[i]);
       if (
         element &&
-        element.offsetTop <= scrollPotion &&
-        element.offsetTop + element.offsetHeight > scrollPotion
+        element.offsetTop <= scrollPositionTop &&
+        element.offsetTop + element.offsetHeight >= scrollPositionTop
       ) {
         setActiveSection(section[i]);
         break;
@@ -120,24 +120,36 @@ export default function Scrollnav() {
   return (
     <nav className={`scroll-nav ${showNav ? '' : 'scroll-nav-hide'}`}>
       <ul>
-        <li className="nav-dot">
-          <Link to="slider" spy={true} smooth={true} offset={0} duration={500}>
-            TOP
-          </Link>
-        </li>
-        <li className="nav-dot">
-          <Link
-            to="section1"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            SECTION1
-          </Link>
-        </li>
-        <li className="nav-dot">
-          <Link
+        <ScrollLink
+          to="slider"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          <li className="nav-dot"></li>
+        </ScrollLink>
+        <ScrollLink
+          to="section1"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onSetActive={() => setActiveSection('section1')}
+          onSetInactive={() => setActiveSection(null)}
+        >
+          <li
+            className={`nav-dot ${
+              activeSection === 'section1' ? 'nav-dot-active' : ''
+            }`}
+          ></li>
+        </ScrollLink>
+        <li
+          className={`nav-dot ${
+            activeSection === 'section2' ? 'nav-dot-active' : ''
+          }`}
+        >
+          <ScrollLink
             to="section2"
             spy={true}
             smooth={true}
@@ -145,10 +157,10 @@ export default function Scrollnav() {
             duration={500}
           >
             SECTION1
-          </Link>
+          </ScrollLink>
         </li>
         <li className="nav-dot">
-          <Link
+          <ScrollLink
             to="section3"
             spy={true}
             smooth={true}
@@ -156,10 +168,10 @@ export default function Scrollnav() {
             duration={500}
           >
             SECTION1
-          </Link>
+          </ScrollLink>
         </li>
         <li className="nav-dot">
-          <Link
+          <ScrollLink
             to="section4"
             spy={true}
             smooth={true}
@@ -167,10 +179,10 @@ export default function Scrollnav() {
             duration={500}
           >
             SECTION1
-          </Link>
+          </ScrollLink>
         </li>
         <li className="nav-dot">
-          <Link
+          <ScrollLink
             to="section5"
             spy={true}
             smooth={true}
@@ -178,10 +190,10 @@ export default function Scrollnav() {
             duration={500}
           >
             SECTION1
-          </Link>
+          </ScrollLink>
         </li>
         <li className="nav-dot">
-          <Link
+          <ScrollLink
             to="section6"
             spy={true}
             smooth={true}
@@ -189,10 +201,10 @@ export default function Scrollnav() {
             duration={500}
           >
             SECTION1
-          </Link>
+          </ScrollLink>
         </li>
         <li className="nav-dot">
-          <Link
+          <ScrollLink
             to="section7"
             spy={true}
             smooth={true}
@@ -200,7 +212,7 @@ export default function Scrollnav() {
             duration={500}
           >
             SECTION1
-          </Link>
+          </ScrollLink>
         </li>
       </ul>
     </nav>

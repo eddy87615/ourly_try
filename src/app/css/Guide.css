@@ -56,8 +56,9 @@
 .guide01-open,
 .guide02-open,
 .guide03-open {
-  transform: translateY(500px) !important;
+  transform: translateY(100%) !important;
   opacity: 0 !important;
+  transition: all 0.5s;
 }
 
 .guide01,
