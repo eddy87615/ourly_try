@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   background: linear-gradient(250deg, #ffffff, #f0f0ff);
-  z-index: 20;
+  z-index: 99;
 
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@
 
   overflow: hidden;
 
-  display: none;
+  /* display: none; */
 }
 
 .guide-open {
@@ -39,8 +39,8 @@
   border: 5px solid var(--ourly-theme);
   border-radius: 16px;
 
-  width: 350px;
-  height: 450px;
+  width: 22%;
+  height: 500px;
 
   padding: 16px;
 
@@ -68,46 +68,46 @@
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.6)
     ),
-    url('/img/question-bg.svg');
-  background-position: 0 0;
+    url('/img/logo-P.svg');
+  background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: 100%;
   position: relative;
 }
-.guide01::after {
+/* .guide01::after {
   content: '';
-  background: url(/img/20Yman-02-bgN.webp);
+  background: url(/img/20Yman-06-bgN.webp);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
-  width: 65%;
-  height: 65%;
-}
-.guide02::after {
+  width: 80%;
+  height: 80%;
+} */
+/* .guide02::after {
   content: '';
-  background: url(/img/30Yman-02-bgN.webp);
+  background: url(/img/30Yman-07-bgN.webp);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 65%;
-}
-.guide03::after {
+  height: 80%;
+} */
+/* .guide03::after {
   content: '';
-  background: url(/img/30Ywoman-01-bgN-2.webp);
+  background: url(/img/30Ywoman-05-bgN.webp);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 55%;
-}
+  height: 70%;
+} */
 
 .guide-bubble {
   display: flex;
@@ -131,7 +131,7 @@
 .open {
   position: absolute;
   right: 160px;
-  bottom: 10%;
+  bottom: 8%;
 
   opacity: 0;
   transform: translateX(-50px);
@@ -154,11 +154,45 @@
   }
 }
 
-.guide01:not(.guide01-open):hover,
+/* .guide01:not(.guide01-open):hover,
 .guide02:not(.guide02-open):hover,
 .guide03:not(.guide03-open):hover {
   transform: scale(1.1) !important;
   transition-duration: 0.5s !important;
+} */
+
+.card-back {
+  background-image: url('/img/question-bg.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(-180deg);
+
+  padding: 16px;
+
+  background-color: #fff;
+  border-radius: 16px;
+
+  cursor: pointer;
+  transition-duration: 0.5;
+}
+
+.guide01:not(.guide01-open):hover,
+.guide02:not(.guide02-open):hover,
+.guide03:not(.guide03-open):hover {
+  transform: perspective(1000px) rotateY(180deg) !important;
+}
+.guide01:hover .card-back,
+.guide02:hover .card-back,
+.guide03:hover .card-back {
+  transform: perspective(1000px) rotateY(0) !important;
+  transition: transform 1 !important;
 }
 
 .open:hover {

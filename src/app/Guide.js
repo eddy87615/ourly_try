@@ -5,6 +5,7 @@ import './css/globals.css';
 import './css/Guide.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Tilt } from 'react-tilt';
 
 export default function Guide() {
   useEffect(() => {
@@ -48,62 +49,106 @@ export default function Guide() {
     });
   };
 
+  // const defaultOptions = {
+  //   reverse: false, // reverse the tilt direction
+  //   max: 35, // max tilt rotation (degrees)
+  //   perspective: 500, // Transform perspective, the lower the more extreme the tilt gets.
+  //   scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
+  //   speed: 2000, // Speed of the enter/exit transition
+  //   transition: true, // Set a transition on enter/exit.
+  //   axis: null, // What axis should be disabled. Can be X or Y.
+  //   reset: true, // If the tilt effect has to be reset on exit.
+  //   easing: 'cubic-bezier(.03,.98,.52,.99)', // Easing on enter/exit.
+  // };
+
   return (
     <>
       <div className={`guide fixed ${isOpen ? 'guide-open' : ''}`}>
         <div className="header fixed top-0 left-0 z-10 p-8">
-          <a href="https://service.ourly.jp/">
-            <img src="/img/ourly_logo.webp" className="w-56" />
-          </a>
+          <img src="/img/ourly_logo.webp" className="w-56" />
         </div>
         <p className="text-[48px] font-bold guide-title">
           こんなお悩みありませんか？
         </p>
-        <div className="guide-bubble">
-          <div
+        <ul className="guide-bubble">
+          <li
             className={`guide01 shadow-2xl ${
               isGuideOpen.guide01 ? 'guide01-open' : ''
             }`}
             onClick={() => handleGuide(1)}
           >
-            <p className="text-[20px] ">
-              ずっとリモートだから会社に
+            <p className="text-[28px] font-bold flex justify-center mt-5 leading-[60px]">
+              私はリモートワーカーです。
               <br />
-              何が起きたのか全然わからない...
+              私は…
             </p>
-            <p className="text-[20px] text-right mt-5">
+            <img
+              src="/img/20Yman-06-bgN.webp"
+              className="absolute bottom-0 left-[50%] translate-x-[-50%] h-[80%]"
+            />
+            <div className="card-back ">
+              <img
+                src="/img/20Yman-02-bgN.webp"
+                className="absolute bottom-0 left-[50%] translate-x-[-50%] w-[60%]"
+              />
+            </div>
+            {/* <p className="text-[20px] text-right mt-5">
               会社との交流が少なくなった…
-            </p>
-          </div>
-          <div
+            </p> */}
+          </li>
+          <li
             className={`guide02 shadow-2xl ${
               isGuideOpen.guide02 ? 'guide02-open' : ''
             }`}
             onClick={() => handleGuide(2)}
           >
-            <p className="text-[20px]">
-              どうやって自分の声がちゃんと
+            <p className="text-[28px] font-bold flex justify-center mt-5 leading-[60px]">
+              私は会社の役員です。
               <br />
-              届けるのか？
+              私は…
             </p>
-            <p className="text-[20px] text-right mt-5">
+            <img
+              src="/img/30Yman-07-bgN.webp"
+              className="absolute bottom-0 left-[50%] translate-x-[-50%] h-[80%]"
+            />
+            <div className="card-back ">
+              <img
+                src="/img/30Yman-06.webp"
+                className="absolute bottom-0 left-[50%] translate-x-[-50%] w-[70%]"
+              />
+            </div>
+            {/* <p className="text-[20px] text-right mt-5">
               職場をさらによくしたいな…
-            </p>
-          </div>
-          <div
+            </p> */}
+          </li>
+          <li
             className={`guide03 shadow-2xl ${
               isGuideOpen.guide03 ? 'guide03-open' : ''
             }`}
             onClick={() => handleGuide(3)}
           >
-            <p className="text-[20px]">社内報の制作と管理が難しい…</p>
-            <p className="text-[20px] text-right mt-5">
-              みんなは自分の作った内容に
+            <p className="text-[28px] font-bold flex justify-center mt-5 leading-[60px]">
+              私は社内報編集者です。
               <br />
-              興味あるかな…
+              私は…
             </p>
-          </div>
-        </div>
+            <img
+              src="/img/30Ywoman-05-bgN.webp"
+              className="absolute bottom-0 left-[50%] translate-x-[-50%] h-[80%]"
+            />
+            <div className="card-back ">
+              <img
+                src="/img/30Ywoman-01-bgN-2.webp"
+                className="absolute bottom-0 left-[50%] translate-x-[-50%] "
+              />
+            </div>
+            {/* <p className="text-[20px] text-right mt-5">
+              私は社内報編集者です。
+              <br />
+              私は…
+            </p> */}
+          </li>
+        </ul>
         <button
           className="open text-[18px] font-bold"
           onClick={() => {
