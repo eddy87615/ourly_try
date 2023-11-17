@@ -134,7 +134,7 @@ export default function Guide() {
             </p>
             <img
               src="/img/30Ywoman-05-bgN.webp"
-              className="absolute bottom-0 left-[50%] translate-x-[-50%] h-[80%]"
+              className="absolute bottom-0 left-[50%] translate-x-[-50%] w-[100%]"
             />
             <div className="card-back ">
               <img

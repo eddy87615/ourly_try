@@ -24,7 +24,7 @@
 
   overflow: hidden;
 
-  /* display: none; */
+  display: none;
 }
 
 .guide-open {
@@ -125,7 +125,7 @@
   transform: translateY(-50px);
   transition: transform 1s ease;
 
-  margin-top: -4%;
+  margin-top: -2%;
 }
 
 .open {
@@ -188,16 +188,10 @@
 .guide03:not(.guide03-open):hover {
   transform: perspective(1000px) rotateY(180deg) !important;
 }
-.guide01:hover .card-back,
-.guide02:hover .card-back,
-.guide03:hover .card-back {
-  transform: perspective(1000px) rotateY(0) !important;
-  transition: transform 1 !important;
-}
 
 .open:hover {
   transform: translateX(32px) !important;
-  transition-duration: 0.5s;
+  /* transition-duration: 0.5s; */
 }
 
 @keyframes openanimation {
