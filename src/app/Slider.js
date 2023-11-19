@@ -73,12 +73,6 @@ export default function Slider() {
           <span className="triangle01"></span>
           <span className="triangle02"></span>
           <img src="/img/office-bg.webp" className="KV" />
-          <span className="download01">
-            <img src="/img/QR_google.webp" />
-          </span>
-          <span className="download02">
-            <img src="/img/QR_apple.webp" />
-          </span>
         </SwiperSlide>
         <SwiperSlide className={isMobile ? '' : 'page02'}>
           <div className="title02">
@@ -104,12 +98,6 @@ export default function Slider() {
           <span className="triangle03"></span>
           <span className="triangle04"></span>
           <img src="/img/30Ywoman-04-bg.webp" />
-          <span className="download03">
-            <img src="/img/QR_google.webp" />
-          </span>
-          <span className="download04">
-            <img src="/img/QR_apple.webp" />
-          </span>
         </SwiperSlide>
         <SwiperSlide className={isMobile ? '' : 'page03'}>
           <div className="title03">
@@ -133,12 +121,6 @@ export default function Slider() {
           <span className="triangle05"></span>
           <span className="triangle06"></span>
           <img src="/img/happypeople-bg.webp" />
-          <span className="download05">
-            <img src="/img/QR_google.webp" />
-          </span>
-          <span className="download06">
-            <img src="/img/QR_apple.webp" />
-          </span>
         </SwiperSlide>
       </Swiper>
     </>

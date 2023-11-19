@@ -85,7 +85,6 @@ export default function Scrollnav() {
     //今のところを検査してactivesectionを設置
     const scrollPosition = window.scrollY + window.innerHeight;
     const section = [
-      'top',
       'section1',
       'section2',
       'section3',
@@ -93,6 +92,7 @@ export default function Scrollnav() {
       'section5',
       'section6',
       'section7',
+      'section8',
     ];
     const scrollPositionTop = window.scrollY;
     const scrollPositionBottom = window.scrollY + window.innerHeight;
@@ -121,15 +121,6 @@ export default function Scrollnav() {
     <nav className={`scroll-nav ${showNav ? '' : 'scroll-nav-hide'}`}>
       <ul>
         <ScrollLink
-          to="slider"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          <li className="nav-dot"></li>
-        </ScrollLink>
-        <ScrollLink
           to="section1"
           spy={true}
           smooth={true}
@@ -144,76 +135,111 @@ export default function Scrollnav() {
             }`}
           ></li>
         </ScrollLink>
-        <li
-          className={`nav-dot ${
-            activeSection === 'section2' ? 'nav-dot-active' : ''
-          }`}
+        <ScrollLink
+          to="section2"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onSetActive={() => setActiveSection('section2')}
+          onSetInactive={() => setActiveSection(null)}
         >
-          <ScrollLink
-            to="section2"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            SECTION1
-          </ScrollLink>
-        </li>
-        <li className="nav-dot">
-          <ScrollLink
-            to="section3"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            SECTION1
-          </ScrollLink>
-        </li>
-        <li className="nav-dot">
-          <ScrollLink
-            to="section4"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            SECTION1
-          </ScrollLink>
-        </li>
-        <li className="nav-dot">
-          <ScrollLink
-            to="section5"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            SECTION1
-          </ScrollLink>
-        </li>
-        <li className="nav-dot">
-          <ScrollLink
-            to="section6"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            SECTION1
-          </ScrollLink>
-        </li>
-        <li className="nav-dot">
-          <ScrollLink
-            to="section7"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            SECTION1
-          </ScrollLink>
-        </li>
+          <li
+            className={`nav-dot ${
+              activeSection === 'section2' ? 'nav-dot-active' : ''
+            }`}
+          ></li>
+        </ScrollLink>
+        <ScrollLink
+          to="section3"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onSetActive={() => setActiveSection('section3')}
+          onSetInactive={() => setActiveSection(null)}
+        >
+          <li
+            className={`nav-dot ${
+              activeSection === 'section3' ? 'nav-dot-active' : ''
+            }`}
+          ></li>
+        </ScrollLink>
+        <ScrollLink
+          to="section4"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onSetActive={() => setActiveSection('section4')}
+          onSetInactive={() => setActiveSection(null)}
+        >
+          <li
+            className={`nav-dot ${
+              activeSection === 'section4' ? 'nav-dot-active' : ''
+            }`}
+          ></li>
+        </ScrollLink>
+        <ScrollLink
+          to="section5"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onSetActive={() => setActiveSection('section5')}
+          onSetInactive={() => setActiveSection(null)}
+        >
+          <li
+            className={`nav-dot ${
+              activeSection === 'section5' ? 'nav-dot-active' : ''
+            }`}
+          ></li>
+        </ScrollLink>
+        <ScrollLink
+          to="section6"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onSetActive={() => setActiveSection('section6')}
+          onSetInactive={() => setActiveSection(null)}
+        >
+          <li
+            className={`nav-dot ${
+              activeSection === 'section6' ? 'nav-dot-active' : ''
+            }`}
+          ></li>
+        </ScrollLink>
+        <ScrollLink
+          to="section7"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onSetActive={() => setActiveSection('section7')}
+          onSetInactive={() => setActiveSection(null)}
+        >
+          <li
+            className={`nav-dot ${
+              activeSection === 'section7' ? 'nav-dot-active' : ''
+            }`}
+          ></li>
+        </ScrollLink>
+        <ScrollLink
+          to="section8"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onSetActive={() => setActiveSection('section8')}
+          onSetInactive={() => setActiveSection(null)}
+        >
+          <li
+            className={`nav-dot ${
+              activeSection === 'section8' ? 'nav-dot-active' : ''
+            }`}
+          ></li>
+        </ScrollLink>
       </ul>
     </nav>
   );
